@@ -1,0 +1,25 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es2017",
+        "jsx": "preserve",
+        "baseUrl": "./",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "strict": true,
+        "resolveJsonModule": true,
+        "allowJs": true,
+        "noEmit": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "noUnusedLocals": false,
+        "lib": ["es2017", "dom", "scripthost"],
+        "typeRoots": [
+            "./node_modules/@types",
+            "./node_modules/@babylonjs",
+            "./src/typings"
+        ]
+    },
+    "include": ["./src/**/*"],
+    "exclude": ["node_modules", "public", "scenarios", ".cache"]
+}
