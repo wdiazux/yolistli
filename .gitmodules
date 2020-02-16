@@ -1,0 +1,3 @@
+[submodule "src/assets/scenarios"]
+	path = src/assets/scenarios
+	url = git@github.com:wdiazux/yolistli-scenarios.git
