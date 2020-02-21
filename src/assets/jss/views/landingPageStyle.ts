@@ -18,7 +18,7 @@ const landingPageStyle = (theme: Theme) =>
             ...container,
         },
         vrBanner: {
-            [theme.breakpoints.up('lg')]: {
+            [theme.breakpoints.up('xl')]: {
                 right: '-100px',
             },
             [theme.breakpoints.down('lg')]: {

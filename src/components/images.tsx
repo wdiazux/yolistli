@@ -13,7 +13,7 @@ import Img from 'gatsby-image'
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-const images = graphql`
+const images = useStaticQuery(graphql`
     query MyQuery {
         allImageSharp {
             edges {
@@ -23,7 +23,7 @@ const images = graphql`
             }
         }
     }
-`
+`)
 
 const PlaceHolderImg: React.FC = () => {
     return <Img fluid={images.placeholderImage.childImageSharp.fluid} />

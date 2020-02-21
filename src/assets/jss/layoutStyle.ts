@@ -3,7 +3,8 @@ import { createStyles } from '@material-ui/core/styles'
 const layoutStyle = () =>
     createStyles({
         main: {
-            flex: 1,
+            flexGrow: 1,
+            flexShrink: 0,
         },
     })
 
