@@ -7,7 +7,6 @@
 
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import CssBaseline from '@material-ui/core/CssBaseline'
 import { makeStyles } from '@material-ui/core/styles'
 
 import '../assets/scss/material-kit-pro/material-kit-pro.scss?v=1.8.0'

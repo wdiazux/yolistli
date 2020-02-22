@@ -19,7 +19,7 @@ module.exports = {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `scenarios`,
-                path: `${__dirname}/src/assets/scenarios/scenarios`,
+                path: `${__dirname}/src/assets/scenarios`,
             },
         },
         {
@@ -30,7 +30,12 @@ module.exports = {
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
-        'gatsby-plugin-sass',
+        {
+            resolve: `gatsby-plugin-sass`,
+            options: {
+                useResolveUrlLoader: true,
+            },
+        },
         'gatsby-plugin-material-ui',
         {
             resolve: `gatsby-plugin-manifest`,
@@ -38,8 +43,8 @@ module.exports = {
                 name: `yolistli`,
                 short_name: `yolistli`,
                 start_url: `/`,
-                background_color: `#663399`,
-                theme_color: `#663399`,
+                background_color: `#e82041`,
+                theme_color: `#e82041`,
                 display: `minimal-ui`,
                 icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
             },
