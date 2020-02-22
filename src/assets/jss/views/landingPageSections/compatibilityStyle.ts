@@ -1,5 +1,8 @@
 import { createStyles } from '@material-ui/core/styles'
-import { container } from '../../material-kit-pro/material-kit-pro'
+import {
+    container,
+    primaryColor,
+} from '../../material-kit-pro/material-kit-pro'
 
 const compatibilityStyle = () =>
     createStyles({
@@ -8,8 +11,7 @@ const compatibilityStyle = () =>
             paddingTop: '70px',
             overflow: 'hidden',
             '&:before': {
-                background:
-                    'linear-gradient(to bottom,#00e4ff, #00eef2, #00f6dc, #15fbbc,#69ff97)',
+                background: `linear-gradient(to bottom, ${primaryColor[0]}, ${primaryColor[1]}, ${primaryColor[1]}, ${primaryColor[4]}, ${primaryColor[4]})`,
                 position: 'absolute',
                 bottom: '-90%',
                 height: '130%',
@@ -25,6 +27,14 @@ const compatibilityStyle = () =>
         },
         compatibilityImage: {
             maxHeight: '436px',
+        },
+        title: {
+            marginTop: '0',
+        },
+        imgContainer: {
+            position: 'relative',
+            width: '100%',
+            height: '100%',
         },
     })
 

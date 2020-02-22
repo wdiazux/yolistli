@@ -15,6 +15,19 @@ module.exports = {
                 path: `${__dirname}/src/assets/images`,
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                name: `scenarios`,
+                path: `${__dirname}/src/assets/scenarios/scenarios`,
+            },
+        },
+        {
+            resolve: `gatsby-transformer-json`,
+            options: {
+                typeName: `Scenarios`,
+            },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         'gatsby-plugin-sass',

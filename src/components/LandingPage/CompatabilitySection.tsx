@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image/withIEPolyfill'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
+import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 // core components
 import GridContainer from '../MaterialKit/Grid/GridContainer'
@@ -33,7 +34,7 @@ const DesignSection = () => {
             <GridContainer className={classes.container} orientation="row">
                 <GridItem md={6}>
                     <div>
-                        <Typography variant="h2">
+                        <Typography variant="h2" className={classes.title}>
                             VR Headset Built For Comfort And Choice
                         </Typography>
                         <Typography variant="body1">
@@ -45,12 +46,19 @@ const DesignSection = () => {
                         </Typography>
                     </div>
                 </GridItem>
-                <GridItem md={6}>
-                    <Img
-                        objectFit="contain"
-                        className={classes.compatibilityImage}
-                        fluid={data.compatibilityImage.childImageSharp.fluid}
-                    />
+                <GridItem md={6} alignItems="flex-end">
+                    <Box
+                        justifyContent="flex-end"
+                        className={classes.imgContainer}>
+                        <Img
+                            objectFit="contain"
+                            objectPosition="bottom center"
+                            className={classes.compatibilityImage}
+                            fluid={
+                                data.compatibilityImage.childImageSharp.fluid
+                            }
+                        />
+                    </Box>
                 </GridItem>
             </GridContainer>
         </section>

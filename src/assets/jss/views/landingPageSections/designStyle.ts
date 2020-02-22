@@ -17,6 +17,10 @@ const designStyle = () =>
         designImg: {
             padding: 0,
         },
+        designImages: {
+            margin: '0',
+            width: '100%',
+        },
     })
 
 export default designStyle

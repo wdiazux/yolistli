@@ -11,7 +11,7 @@ import DevicesIcon from '@material-ui/icons/Devices'
 import ListIcon from '@material-ui/icons/List'
 // core components
 import Button from '../../components/MaterialKit/CustomButtons/Button'
-import navbarsStyle from '../../assets/jss/views/componentsSections/navbarStyle'
+import navbarsStyle from '../../assets/jss/views/componentsSections/navbarStyles'
 
 const useStyles = makeStyles(navbarsStyle)
 

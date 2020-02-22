@@ -71,11 +71,16 @@ const DesignSection = () => {
                     <Img
                         className={classes.vrImage}
                         objectFit="contain"
+                        objectPosition="bottom center"
                         fluid={data.vrImage.childImageSharp.fluid}
                     />
                 </GridItem>
             </GridContainer>
-            <GridContainer spacing={0} orientation="row" alignItems="center">
+            <GridContainer
+                spacing={0}
+                orientation="row"
+                alignItems="center"
+                className={classes.designImages}>
                 <GridItem md={4} className={classes.designImg}>
                     <Img
                         objectFit="cover"
