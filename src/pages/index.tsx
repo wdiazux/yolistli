@@ -5,6 +5,8 @@ import SEO from '../components/seo'
 
 import HeroSection from '../components/LandingPage/HeroSection'
 import AboutSection from '../components/LandingPage/AboutSection'
+import DesignSection from '../components/LandingPage/DesignSection'
+import CompatibilitySection from '../components/LandingPage/CompatabilitySection'
 
 const IndexPage: React.FC = () => {
     return (
@@ -12,6 +14,8 @@ const IndexPage: React.FC = () => {
             <SEO title="Home" />
             <HeroSection />
             <AboutSection />
+            <DesignSection />
+            <CompatibilitySection />
         </Layout>
     )
 }

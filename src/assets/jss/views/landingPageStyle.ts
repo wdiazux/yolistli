@@ -12,7 +12,7 @@ const landingPageStyle = (theme: Theme) =>
             padding: '40px 0',
         },
         heroSection: {
-            padding: '65px 0 40px 0 !important',
+            padding: '110px 0 40px 0',
         },
         container: {
             ...container,

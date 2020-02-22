@@ -8,7 +8,14 @@ interface Props {
 }
 
 const TopBar: React.FC<Props> = ({ siteTitle }) => {
-    return <Header brand={siteTitle} color="primary" links={<HeaderLinks />} />
+    return (
+        <Header
+            brand={siteTitle}
+            color="primary"
+            fixed={true}
+            links={<HeaderLinks />}
+        />
+    )
 }
 
 export default TopBar

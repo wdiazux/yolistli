@@ -19,6 +19,25 @@ const theme = createMuiTheme({
             xl: 1300,
         },
     },
+    typography: {
+        h1: {
+            fontSize: '3rem',
+            fontWeight: 600,
+        },
+        h2: {
+            fontSize: '2rem',
+            fontWeight: 600,
+            lineHeight: 1.5,
+            marginTop: '20px',
+            marginBottom: '10px',
+        },
+        h3: {
+            fontWeight: 600,
+        },
+        body1: {
+            marginBottom: '10px',
+        },
+    },
 })
 
 export default theme

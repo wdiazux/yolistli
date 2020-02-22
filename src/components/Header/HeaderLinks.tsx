@@ -25,22 +25,22 @@ const HeaderLinks: React.FC = () => {
         },
         {
             name: 'About',
-            url: '/#about',
+            url: '#about',
             icon: <InfoIcon />,
         },
         {
             name: 'Design',
-            url: '/#design',
+            url: '#design',
             icon: <Gesture />,
         },
         {
             name: 'Compatibility',
-            url: '/#compability',
+            url: '#compatibility',
             icon: <DevicesIcon />,
         },
         {
             name: 'Features',
-            url: '/#features',
+            url: '#features',
             icon: <ListIcon />,
         },
     ]

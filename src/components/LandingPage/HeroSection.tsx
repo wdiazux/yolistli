@@ -5,6 +5,7 @@ import Img from 'gatsby-image/withIEPolyfill'
 // @material-ui/core components
 import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/core/styles'
+import Typography from '@material-ui/core/Typography'
 // core components
 import GridContainer from '../MaterialKit/Grid/GridContainer'
 import GridItem from '../MaterialKit/Grid/GridItem'
@@ -78,15 +79,17 @@ const HeroSection = () => {
                             <span className={classes.heroSpan}>
                                 Virtual Reality
                             </span>
-                            <h1 className={classes.heroTitle}>
+                            <Typography
+                                variant="h1"
+                                classes={{ h1: classes.heroTitle }}>
                                 Dream With Your Eyes Open
-                            </h1>
-                            <p>
+                            </Typography>
+                            <Typography variant="body1">
                                 Virtual reality is a great option if you want to
                                 know places from the comfort of your home, and
                                 do not worry if you do not have lenses because
                                 it works on mobiles and computers.
-                            </p>
+                            </Typography>
                             <Button href="/scenarios/" color={'primary'}>
                                 Explore a VR Experience
                                 <ArrowForwardIcon />
