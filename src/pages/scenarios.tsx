@@ -20,7 +20,9 @@ const useStyles = makeStyles(scenarioPageStyles)
 
 const scenarios: React.FC = () => {
     const [currentSlide, setCurrentSlide] = useState(0)
+    const [slideClicked, setSlideClicked] = useState(false)
     const globalState = useContext(GlobalContext)
+    const { scenarioUrl, setScenarioUrl } = globalState
     const classes = useStyles()
     const data = useStaticQuery(graphql`
         query {
@@ -68,10 +70,13 @@ const scenarios: React.FC = () => {
     }
 
     const goToExperience = () => {
-        const { setScenarioUrl } = globalState
         setScenarioUrl(scenarios[currentSlide].node.location)
-        navigate('/experience')
+        setSlideClicked(true)
     }
+
+    useEffect(() => {
+        if (slideClicked) navigate('/experience')
+    }, [scenarioUrl, slideClicked])
 
     return (
         <Layout>
