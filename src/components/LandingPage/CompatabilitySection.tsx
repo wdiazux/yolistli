@@ -46,7 +46,7 @@ const DesignSection = () => {
                         </Typography>
                     </div>
                 </GridItem>
-                <GridItem md={6} alignItems="flex-end">
+                <GridItem md={6}>
                     <Box
                         justifyContent="flex-end"
                         className={classes.imgContainer}>

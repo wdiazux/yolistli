@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, useStaticQuery, graphql } from 'gatsby'
+import React, { useContext, useState, useEffect } from 'react'
+import { navigate, useStaticQuery, graphql } from 'gatsby'
 // core components
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -10,6 +10,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 // core components
+import { GlobalContext } from '../context/GlobalContext'
 import GridContainer from '../components/MaterialKit/Grid/GridContainer'
 import GridItem from '../components/MaterialKit/Grid/GridItem'
 import scenarioPageStyles from '../assets/jss/views/scenarioPagestyle'
@@ -18,13 +19,16 @@ import '../assets/scss/scenarios.scss'
 const useStyles = makeStyles(scenarioPageStyles)
 
 const scenarios: React.FC = () => {
+    const [currentSlide, setCurrentSlide] = useState(0)
+    const globalState = useContext(GlobalContext)
     const classes = useStyles()
     const data = useStaticQuery(graphql`
         query {
-            allScenarios {
+            allScenarios(sort: { fields: name }) {
                 edges {
                     node {
                         name
+                        location
                     }
                 }
             }
@@ -33,6 +37,7 @@ const scenarios: React.FC = () => {
                     sourceInstanceName: { eq: "scenarios" }
                     name: { eq: "poster" }
                 }
+                sort: { fields: name }
             ) {
                 edges {
                     node {
@@ -53,12 +58,19 @@ const scenarios: React.FC = () => {
         autoplay: false,
         slidesToShow: 1,
         slidesToScroll: 1,
+        afterChange: (current: number) => setCurrentSlide(current),
     }
     const scenarios = data.allScenarios.edges
     const posters = data.allFile.edges
 
     interface SlideOptions {
         node: { name: string }
+    }
+
+    const goToExperience = () => {
+        const { setScenarioUrl } = globalState
+        setScenarioUrl(scenarios[currentSlide].node.location)
+        navigate('/experience')
     }
 
     return (
@@ -76,18 +88,20 @@ const scenarios: React.FC = () => {
                         <Slider {...settings}>
                             {scenarios.map((node: SlideOptions, i: number) => (
                                 <div key={i}>
-                                    <Link to="/experience">
-                                        <Img
-                                            objectFit="cover"
-                                            fluid={
-                                                posters[i].node.childImageSharp
-                                                    .fluid
-                                            }
-                                        />
-                                        <Typography variant="h3">
-                                            {node.node.name}
-                                        </Typography>
-                                    </Link>
+                                    <Img
+                                        objectFit="cover"
+                                        fluid={
+                                            posters[i].node.childImageSharp
+                                                .fluid
+                                        }
+                                    />
+                                    <Typography variant="h3">
+                                        {node.node.name}
+                                    </Typography>
+                                    <div
+                                        className={classes.slideOverlay}
+                                        data-index={i}
+                                        onClick={goToExperience}></div>
                                 </div>
                             ))}
                         </Slider>

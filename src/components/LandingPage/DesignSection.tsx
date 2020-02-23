@@ -47,7 +47,6 @@ const DesignSection = () => {
         }
     `)
 
-    console.log(data.vrImage.childImageSharp.fluid)
     return (
         <section id="design">
             <GridContainer
