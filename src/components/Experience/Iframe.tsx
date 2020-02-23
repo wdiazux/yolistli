@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 // @material-ui/core components
 import { makeStyles } from '@material-ui/core/styles'
 // core components
@@ -11,10 +11,16 @@ const Iframe: React.FC = () => {
     const globalState = useContext(GlobalContext)
     const classes = useStyles()
     let { scenarioUrl } = globalState
-    if (scenarioUrl === '' || !scenarioUrl) {
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        scenarioUrl = JSON.parse(localStorage.getItem('scenarioUrl')!)
-    }
+
+    useEffect(() => {
+        if (
+            (scenarioUrl === '' || !scenarioUrl) &&
+            localStorage !== undefined
+        ) {
+            // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+            scenarioUrl = JSON.parse(localStorage.getItem('scenarioUrl')!)
+        }
+    }, [])
 
     return (
         <iframe
