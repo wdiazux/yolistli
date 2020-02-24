@@ -52,11 +52,11 @@ const AboutSection = () => {
                             Discover A Whole New Reality
                         </Typography>
                         <Typography variant="body1">
-                            We build custom virtual designs for its
-                            construction, spaces, and even small products with
-                            new virtual reality technologies for the web, you
-                            can immerse yourself in a new virtual world and it
-                            is easy to install on any website.
+                            We build custom virtual designs for construction,
+                            spaces, and even small products with new virtual
+                            reality technologies for the web. You can enjoy the
+                            immersion in a new virtual world with an easy
+                            integration on any website.
                         </Typography>
                         <div className={classes.aboutFeatures}>
                             <GridContainer>
@@ -83,7 +83,7 @@ const AboutSection = () => {
                                             classes.icon
                                         }></FontAwesomeIcon>
                                     <Typography variant="h3">
-                                        Innovator Design
+                                        Innovative Design
                                     </Typography>
                                 </GridItem>
                                 <GridItem
@@ -122,7 +122,7 @@ const AboutSection = () => {
                                             classes.icon
                                         }></FontAwesomeIcon>
                                     <Typography variant="h3">
-                                        For te Web
+                                        For the Web
                                     </Typography>
                                 </GridItem>
                                 <GridItem

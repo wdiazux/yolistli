@@ -76,9 +76,9 @@ const HeroSection = () => {
                 <GridContainer orientation="row" alignItems="center">
                     <GridItem md={5}>
                         <div className="heroContent">
-                            <span className={classes.heroSpan}>
-                                Virtual Reality
-                            </span>
+                            <span
+                                className={classes.heroSpan}
+                                style={{ height: '20px' }}></span>
                             <Typography
                                 variant="h1"
                                 classes={{ h1: classes.heroTitle }}>
