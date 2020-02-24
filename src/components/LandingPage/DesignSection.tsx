@@ -55,15 +55,13 @@ const DesignSection = () => {
                 alignItems="center">
                 <div className={classes.sectionTitle}>
                     <Typography variant="h2">
-                        Go On Adventures You&apos;ve Only Dreamt Of Explore This
-                        World And Beyond
+                        Go On Adventures You&apos;ve Only Dreamt Of
                     </Typography>
                     <Typography variant="body1">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Quis ipsum suspendisse ultrices gravida.
-                        Risus commodo viverra maecenas accumsan lacus vel
-                        facilisis.
+                        Visit iconic places across the globe. Experience their
+                        culture, history and all from your home, or your work.
+                        Perhaps your university. Just open your browser and
+                        enjoy the experience!
                     </Typography>
                 </div>
                 <GridItem>
