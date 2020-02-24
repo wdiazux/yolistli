@@ -46,7 +46,7 @@ module.exports = {
                 background_color: `#e82041`,
                 theme_color: `#e82041`,
                 display: `minimal-ui`,
-                icon: `src/assets/images/favicon.png`,
+                icon: `src/assets/images/yolistli-logo.png`,
             },
         },
         // this (optional) plugin enables Progressive Web App + Offline functionality
