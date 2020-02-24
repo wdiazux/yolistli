@@ -10,7 +10,6 @@ import GridContainer from '../MaterialKit/Grid/GridContainer'
 import GridItem from '../MaterialKit/Grid/GridItem'
 
 import compatibilityStyle from '../../assets/jss/views/landingPageSections/compatibilityStyle'
-
 const useStyles = makeStyles(compatibilityStyle)
 
 const DesignSection = () => {
@@ -35,14 +34,19 @@ const DesignSection = () => {
                 <GridItem md={6}>
                     <div>
                         <Typography variant="h2" className={classes.title}>
-                            VR Headset Built For Comfort And Choice
+                            Built for everyone in mind
                         </Typography>
                         <Typography variant="body1">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Quis ipsum suspendisse ultrices
-                            gravida. Risus commodo viverra maecenas accumsan
-                            lacus vel facilisis.
+                            Yolistli&apos;s experiences are built thinking on
+                            all the people using multiple types of devices. From
+                            a smartphone view to a VR headset using the same
+                            phone to complex solutions like the Oculus Rift or
+                            HTC Vive. Everything is just
+                            <a href="/scenarios/" style={{ color: '#EB5140' }}>
+                                {' '}
+                                {/* Fix later */}
+                                one click away
+                            </a>
                         </Typography>
                     </div>
                 </GridItem>
