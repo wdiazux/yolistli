@@ -75,6 +75,9 @@ const scenarios: React.FC = () => {
     }
 
     useEffect(() => {
+        if (localStorage !== undefined) {
+            localStorage.setItem('scenarioUrl', JSON.stringify(scenarioUrl))
+        }
         if (slideClicked) navigate('/experience')
     }, [scenarioUrl, slideClicked])
 
