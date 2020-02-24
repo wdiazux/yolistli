@@ -10,7 +10,7 @@ const useStyles = makeStyles(footerStyles)
 const Iframe: React.FC = () => {
     const globalState = useContext(GlobalContext)
     const classes = useStyles()
-    let { scenarioUrl } = globalState
+    const { scenarioUrl, setScenarioUrl } = globalState
 
     useEffect(() => {
         if (
@@ -18,7 +18,8 @@ const Iframe: React.FC = () => {
             localStorage !== undefined
         ) {
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            scenarioUrl = JSON.parse(localStorage.getItem('scenarioUrl')!)
+            const url = JSON.parse(localStorage.getItem('scenarioUrl')!)
+            setScenarioUrl(url)
         }
     }, [])
 
