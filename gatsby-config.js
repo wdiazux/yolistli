@@ -2,7 +2,7 @@
 module.exports = {
     siteMetadata: {
         title: `Yolistli`,
-        description: `A WebVR Experience.`,
+        description: `A platform that offers virtual interactive reconstructions for the Web.`,
         author: `Yolistli`,
     },
     plugins: [
@@ -40,8 +40,8 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `yolistli`,
-                short_name: `yolistli`,
+                name: `Yolistli`,
+                short_name: `Yolistli`,
                 start_url: `/`,
                 background_color: `#e82041`,
                 theme_color: `#e82041`,
