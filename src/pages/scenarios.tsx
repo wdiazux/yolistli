@@ -39,7 +39,7 @@ const scenarios: React.FC = () => {
                     sourceInstanceName: { eq: "scenarios" }
                     name: { eq: "poster" }
                 }
-                sort: { fields: name }
+                sort: { order: ASC, fields: relativeDirectory }
             ) {
                 edges {
                     node {

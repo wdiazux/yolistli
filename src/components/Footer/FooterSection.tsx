@@ -17,34 +17,24 @@ const FooterSection: React.FC = () => {
     return (
         <footer className={footerClass}>
             <GridContainer className={classes.container}>
-                <GridItem md={4}>
+                <GridItem md={6}>
                     <Typography variant="h5">Yolistli</Typography>
                     <Typography variant="body1">
-                        Probably the best UI Kit in the world! We know
-                        you&apos;ve been waiting for it, so don&apos;t be shy!
+                        We build custom virtual designs for construction,
+                        spaces, and even small products with new virtual reality
+                        technologies for the web. You can enjoy the immersion in
+                        a new virtual world with an easy integration on any
+                        website.
                     </Typography>
                 </GridItem>
-                <GridItem md={4}>
-                    <Typography variant="h5">About</Typography>
-                    <ul className={classes.linksVertical}>
-                        <li>
-                            <a href="#pablo">Transactions FAQ</a>
-                        </li>
-                        <li>
-                            <a href="#pablo">Terms & conditions</a>
-                        </li>
-                        <li>
-                            <a href="#pablo">Licenses</a>
-                        </li>
-                    </ul>
-                </GridItem>
-                <GridItem md={4}>
-                    <Typography variant="h5">
-                        Subscribe to Newsletter
+                <GridItem md={6}>
+                    <Typography variant="h5">Contact us</Typography>
+                    <Typography variant="body1">
+                        Phone: (503) 731-419-87
                     </Typography>
                     <Typography variant="body1">
-                        Join our newsletter and get news in your inbox every
-                        week! We hate spam too, so no worries about this.
+                        Office: El Salvador, San Salvador, Col Delicias del
+                        Norte, Pje Landos II 3B
                     </Typography>
                 </GridItem>
                 <hr />

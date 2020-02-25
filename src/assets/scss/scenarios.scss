@@ -4,42 +4,48 @@
 $background: #e82041;
 
 #title {
-    text-align: center;
-    margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .slick-slider {
-    width: 75%;
-    max-width: 100%;
-    border: 10px solid $background;
-    border-radius: 10px;
-    box-sizing: border-box;
-    background: $background;
+  width: 100%;
+  max-width: 100%;
+  border: 10px solid $background;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background: $background;
 
-    h3 {
-        position: absolute;
-        padding: 10px 0 33px 0;
-        width: 100%;
-        bottom: 0;
-        color: #fff;
-        text-transform: capitalize;
-        text-align: center;
-        background: $background;
-    }
+  h3 {
+    position: absolute;
+    padding: 10px 0 33px 0;
+    width: 100%;
+    bottom: 0;
+    color: #fff;
+    text-transform: capitalize;
+    text-align: center;
+    background: $background;
+  }
 }
 .slick-dots {
-    bottom: 0;
+  bottom: 0;
 }
 button.slick-arrow.slick-prev,
 button.slick-arrow.slick-next {
-    opacity: 0.8;
-    transition: opacity 0.5s ease;
-    &:hover {
-        opacity: 1;
-    }
-    &::before {
-        color: $background;
-        opacity: 1;
-        font-size: 40px;
-    }
+  opacity: 0.8;
+  transition: opacity 0.5s ease;
+  &:hover {
+    opacity: 1;
+  }
+  &::before {
+    color: $background;
+    opacity: 1;
+    font-size: 40px;
+  }
+}
+
+@media all and (min-width: 600px) {
+  .slick-slider {
+    width: 75%;
+  }
 }

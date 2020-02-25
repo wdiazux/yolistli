@@ -8,7 +8,7 @@ import HomeIcon from '@material-ui/icons/Home'
 import InfoIcon from '@material-ui/icons/Info'
 import Gesture from '@material-ui/icons/Gesture'
 import DevicesIcon from '@material-ui/icons/Devices'
-import ListIcon from '@material-ui/icons/List'
+import BrightnessHigh from '@material-ui/icons/BrightnessHigh'
 // core components
 import Button from '../../components/MaterialKit/CustomButtons/Button'
 import navbarsStyle from '../../assets/jss/views/componentsSections/navbarStyles'
@@ -39,9 +39,9 @@ const HeaderLinks: React.FC = () => {
             icon: <DevicesIcon />,
         },
         {
-            name: 'Features',
-            url: '#features',
-            icon: <ListIcon />,
+            name: 'Experiences',
+            url: '/scenarios',
+            icon: <BrightnessHigh />,
         },
     ]
 

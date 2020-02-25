@@ -14,13 +14,13 @@ const useStyles = makeStyles(styles)
 export default function CustomFileInput(props) {
     const [fileNames, setFileNames] = React.useState('')
     // eslint-disable-next-line
-  const [files, setFiles] = React.useState(null);
+    const [files, setFiles] = React.useState(null)
     const hiddenFile = React.createRef()
     const onFocus = e => {
         hiddenFile.current.click(e)
     }
     // eslint-disable-next-line
-  const handleSubmit = e => {
+    const handleSubmit = e => {
         e.preventDefault()
         // files is the file/image uploaded
         // in this function you can save the image (files) on form submit

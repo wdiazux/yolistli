@@ -7,7 +7,7 @@
   "jsxBracketSameLine": true,
   "overrides": [
     {
-      "files": "*.css",
+      "files": ["*.scss", "*.css"],
       "options": {
         "tabWidth": 2
       }
