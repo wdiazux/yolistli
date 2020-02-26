@@ -1,6 +1,7 @@
 @import 'variables';
 @import '~slick-carousel/slick/slick';
 @import '~slick-carousel/slick/slick-theme';
+@import 'material-kit-pro/core/variables';
 $background: #e82041;
 
 #title {
@@ -30,6 +31,21 @@ $background: #e82041;
 .slick-dots {
   bottom: 0;
 }
+
+.slick-prev {
+  left: 0;
+  [dir='rtl'] & {
+    right: 0;
+  }
+}
+
+.slick-next {
+  right: 0;
+  [dir='rtl'] & {
+    left: 0;
+  }
+}
+
 button.slick-arrow.slick-prev,
 button.slick-arrow.slick-next {
   opacity: 0.8;
@@ -40,12 +56,18 @@ button.slick-arrow.slick-next {
   &::before {
     color: $background;
     opacity: 1;
-    font-size: 40px;
+    font-size: 30px;
   }
 }
 
-@media all and (min-width: 600px) {
+@media all and (min-width: map-get($grid-breakpoints, 'md')) {
   .slick-slider {
     width: 75%;
+  }
+  button.slick-arrow.slick-prev,
+  button.slick-arrow.slick-next {
+    &::before {
+      font-size: 42px;
+    }
   }
 }
